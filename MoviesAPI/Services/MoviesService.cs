@@ -1,26 +1,41 @@
 ﻿
 using MoviesAPI.Models;
 using MoviesAPI.Services.Interfaces;
-using System.Reflection.Metadata.Ecma335;
+using System.Net;
+using System.Text.Json;
 
 namespace MoviesAPI.Services
 {
     public class MoviesService : IMovies
     {
-        public MoviesService() { }
+        private readonly MoviesDbCotext _dbContext;
+        private Response response;
+
+        public MoviesService(MoviesDbCotext dbContext, Response response)
+        {
+            _dbContext = dbContext;
+            this.response = response;
+        }
 
         public Response GetAllMovies() 
         {
-            return new Response();
+            response.Content = JsonSerializer.Serialize(_dbContext.Movies.ToList());
+            response.StatusCode = HttpStatusCode.OK;
+            return response;
         }
 
         public Response GetMovieById(int id)
         {
+            response.Content = JsonSerializer.Serialize(_dbContext.Movies.Select(x=>x.Id == id).ToList());
+            response.StatusCode = HttpStatusCode.OK;
             return new Response();
         }
 
         public Response AddMovie(Movies movie)
         {
+            var result = _dbContext.Movies.Add(movie);
+            _dbContext.SaveChanges();
+
             return new Response();
         }
         

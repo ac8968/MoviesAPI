@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MoviesAPI.Models;
 using Serilog;
 
@@ -9,7 +8,9 @@ namespace MoviesAPI.Controllers
     [ApiController]
     public class MoviesController : ControllerBase
     {
-        public MoviesController() { }
+        public MoviesController()
+        {
+        }
 
         [HttpGet]
         [Route("/GetMovies")]
@@ -28,7 +29,7 @@ namespace MoviesAPI.Controllers
 
         [HttpPost]
         [Route("/AddMovie")]
-        public IActionResult Add(Movies request)
+        public IActionResult Add(Movies movie)
         {
             return Ok(new { id = 1 });
         }

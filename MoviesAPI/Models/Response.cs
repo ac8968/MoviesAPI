@@ -5,6 +5,6 @@ namespace MoviesAPI.Models
     public class Response
     {
         public HttpStatusCode StatusCode { get; set; }
-        public JsonContent? Content { get; set; }
+        public string? Content { get; set; }
     }
 }

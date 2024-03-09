@@ -17,8 +17,8 @@ namespace MoviesAPI
             // Add services to the container.
 
             builder.Services.AddControllers();
-            builder.Services.AddSingleton<IMovies, MoviesService>();
-            builder.Services.AddSingleton<ICategories, CategoriesService>();
+            //builder.Services.AddSingleton<IMovies, MoviesService>();
+            //builder.Services.AddSingleton<ICategories, CategoriesService>();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
 
