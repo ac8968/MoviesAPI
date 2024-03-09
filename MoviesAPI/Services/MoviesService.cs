@@ -11,10 +11,9 @@ namespace MoviesAPI.Services
         private readonly MoviesDbCotext _dbContext;
         private Response response;
 
-        public MoviesService(MoviesDbCotext dbContext, Response response)
+        public MoviesService(MoviesDbCotext dbContext)
         {
             _dbContext = dbContext;
-            this.response = response;
         }
 
         public Response GetAllMovies() 
