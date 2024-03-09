@@ -3,6 +3,8 @@ using MoviesAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using Serilog.Events;
 using Serilog;
+using MoviesAPI.Services.Interfaces;
+using MoviesAPI.Services;
 
 namespace MoviesAPI
 {
@@ -15,6 +17,8 @@ namespace MoviesAPI
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddSingleton<IMovies, MoviesService>();
+            builder.Services.AddSingleton<ICategories, CategoriesService>();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
 

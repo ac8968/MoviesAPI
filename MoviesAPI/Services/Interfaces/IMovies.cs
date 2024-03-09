@@ -1,6 +1,6 @@
 ﻿using MoviesAPI.Models;
 
-namespace MoviesAPI.Services
+namespace MoviesAPI.Services.Interfaces
 {
     public interface IMovies
     {

@@ -30,6 +30,8 @@
 
   <ItemGroup>
     <Folder Include="Logs\" />
+    <Folder Include="Helper\" />
+    <Folder Include="Middlewear\" />
   </ItemGroup>
 
 </Project>

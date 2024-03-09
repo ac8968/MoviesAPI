@@ -33,4 +33,10 @@
     <Using Include="NUnit.Framework" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controller\" />
+    <Folder Include="Helper\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>
