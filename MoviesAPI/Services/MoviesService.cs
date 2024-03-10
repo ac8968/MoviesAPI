@@ -19,8 +19,18 @@
 
         public Response GetMovieById(int id)
         {
-            response.Content = JsonSerializer.Serialize(_dbContext.Movies.Where(x=>x.Id == id).SingleOrDefault());
-            response.StatusCode = HttpStatusCode.OK;
+            Movies movie = _dbContext.Movies.Where(x => x.Id == id).SingleOrDefault()!;
+            if (movie == null) 
+            {
+                response.Content = "No matching record found";
+                response.StatusCode = HttpStatusCode.NotFound;
+            }
+            else 
+            {
+                response.Content = JsonSerializer.Serialize(_dbContext.Movies.Where(x => x.Id == id).SingleOrDefault());
+                response.StatusCode = HttpStatusCode.OK;
+            }
+            
             return response;
         }
 
