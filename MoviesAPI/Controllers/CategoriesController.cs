@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-
-namespace MoviesAPI.Controllers
+﻿namespace MoviesAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

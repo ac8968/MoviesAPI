@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace MoviesAPI.Models
+﻿namespace MoviesAPI.Models
 {
     public partial class MoviesDbCotext : DbContext
     {

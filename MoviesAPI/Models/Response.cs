@@ -1,6 +1,4 @@
-﻿using System.Net;
-
-namespace MoviesAPI.Models
+﻿namespace MoviesAPI.Models
 {
     public class Response
     {

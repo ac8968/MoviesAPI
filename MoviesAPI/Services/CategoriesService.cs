@@ -1,7 +1,4 @@
-﻿using MoviesAPI.Models;
-using MoviesAPI.Services.Interfaces;
-
-namespace MoviesAPI.Services
+﻿namespace MoviesAPI.Services
 {
     public class CategoriesService : ICategories
     {

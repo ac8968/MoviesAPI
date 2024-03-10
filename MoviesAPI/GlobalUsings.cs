@@ -1,0 +1,11 @@
+﻿global using MoviesAPI.Models;
+global using Microsoft.EntityFrameworkCore;
+global using Serilog.Events;
+global using Serilog;
+global using MoviesAPI.Services.Interfaces;
+global using MoviesAPI.Services;
+global using System.ComponentModel.DataAnnotations;
+global using System.ComponentModel.DataAnnotations.Schema;
+global using Microsoft.AspNetCore.Mvc;
+global using System.Net;
+global using System.Text.Json;

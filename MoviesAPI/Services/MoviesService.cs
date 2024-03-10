@@ -1,10 +1,4 @@
-﻿
-using MoviesAPI.Models;
-using MoviesAPI.Services.Interfaces;
-using System.Net;
-using System.Text.Json;
-
-namespace MoviesAPI.Services
+﻿namespace MoviesAPI.Services
 {
     public class MoviesService : IMovies
     {

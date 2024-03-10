@@ -1,8 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MoviesAPI.Models;
-using Serilog;
-
-namespace MoviesAPI.Controllers
+﻿namespace MoviesAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

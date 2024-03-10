@@ -1,11 +1,3 @@
-
-using MoviesAPI.Models;
-using Microsoft.EntityFrameworkCore;
-using Serilog.Events;
-using Serilog;
-using MoviesAPI.Services.Interfaces;
-using MoviesAPI.Services;
-
 namespace MoviesAPI
 {
     public class Program
